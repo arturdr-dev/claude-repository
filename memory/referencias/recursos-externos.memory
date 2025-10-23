@@ -1,0 +1,261 @@
+# 🔗 Recursos Claude Code CLI - Links e Repositórios Úteis
+
+**Tipo:** Memory Document
+**Prioridade:** Alta
+**Contexto:** Links e repositórios para templates, agentes, exemplos e integrações Claude Code
+
+---
+
+## 📚 Recursos Principais Claude Code
+
+### **🏢 Repositório Oficial Claude Code CLI**
+- **URL:** https://github.com/anthropics/claude-code
+- **Local:** `/home/arturdr/Claude/official-claude-code`
+- **Descrição:** Código-fonte oficial do Claude Code CLI
+- **Conteúdo:**
+  - Código fonte completo da CLI
+  - Exemplos oficiais de configuração
+  - Documentação técnica
+  - Issues e desenvolvimento ativo
+- **Status:** **ESSENCIAL** - Core oficial do ecossistema
+
+---
+
+## 🍳 Claude Cookbooks (Recursos Oficiais API)
+
+### **Repositório Oficial Anthropic**
+- **URL:** https://github.com/anthropics/claude-cookbooks
+- **Descrição:** Coleção oficial de códigos, guias e exemplos da Anthropic
+- **Público-alvo:** Desenvolvedores que usam Claude API
+- **Conteúdo Principal:**
+  - **Snippets de código reutilizáveis** para integração rápida
+  - **Recursos avançados da API Claude:** classificação, sumarização, RAG
+  - **Capacidades multimodais:** interpretação de imagens, geração de gráficos
+  - **Integrações com terceiros:** Pinecone, Wikipedia, Voyage AI
+  - **Técnicas avançadas:** sub-agentes, parsing PDFs, avaliações automatizadas
+  - **Exemplos AWS:** Deploy e infraestrutura cloud
+- **Linguagem:** Majoritariamente Python (conceitos aplicáveis a qualquer linguagem)
+- **Status:** Recurso oficial **ESSENCIAL** para desenvolvimento Claude API
+
+---
+
+## 📋 Awesome Claude Code (Recursos Principais)
+
+### **Repositório Principal**
+- **URL:** https://github.com/hesreallyhim/awesome-claude-code
+- **Descrição:** Coleção curada mais completa de recursos Claude Code
+- **Conteúdo:**
+  - Agent Skills e configurações especializadas
+  - Workflows (AB Method, RIPER, Context Priming)
+  - Tooling (cc-tools, claudekit, ContextKit)
+  - Slash commands organizados por categoria
+  - Templates CLAUDE.md por linguagem/domínio
+
+---
+
+## 🎯 Templates e Agentes Prontos
+
+### **Claude Code Templates**
+- **URL:** https://github.com/davila7/claude-code-templates
+- **Descrição:** Configurações prontas para uso, coleção abrangente
+- **Recursos:**
+  - AI agents configurados
+  - Custom commands
+  - Settings e hooks
+  - MCPs (Model Context Protocol)
+  - Project templates
+  - Exemplos JSON prontos para adaptação
+
+### **SuperClaude Framework**
+- **URL:** https://github.com/SuperClaude-Org/SuperClaude_Framework
+- **Descrição:** Framework avançado para escalar Claude Code
+- **Capacidades:**
+  - **26 commands** - Comandos especializados
+  - **16 agents** - Agentes configurados
+  - **7 modes** - Modos de operação
+  - **8 MCP servers** - Servidores MCP integrados
+  - **Performance:** 2-3x mais rápido com MCP
+  - **Economia:** 30-50% menos tokens
+  - **Deep research:** Pesquisa web autônoma
+  - **Adaptive planning:** Planejamento adaptativo
+
+---
+
+## 🏗️ Projetos Reais e Exemplos
+
+### **My Claude Code Setup**
+- **URL:** https://github.com/centminmod/my-claude-code-setup
+- **Descrição:** Configuração inicial compartilhada
+- **Features:**
+  - Memory bank systems
+  - Custom agents
+  - Specialized slash commands
+  - Configurações de produção
+
+---
+
+## 📚 Documentação Oficial
+
+### **Sub-Agents**
+- **URL:** https://docs.claude.com/en/docs/claude-code/sub-agents
+- **Descrição:** Guia oficial para criar e usar agentes especializados
+- **Conteúdo:**
+  - Criação de agentes
+  - Configurações JSON
+  - Best practices
+  - Exemplos práticos
+
+### **SDK e Migração**
+- **URL:** https://docs.claude.com/en/docs/claude-code/sdk/migration-guide
+- **Descrição:** Guia oficial para SDK e migração de agentes
+- **Recursos:**
+  - Migration guide
+  - SDK examples
+  - API references
+
+### **GitHub Actions**
+- **URL:** https://docs.claude.com/en/docs/claude-code/github-actions
+- **Descrição:** Integração com pipelines GitHub Actions
+- **Aplicações:** CI/CD automatizado com Claude Code
+
+### **GitLab CI/CD**
+- **URL:** https://docs.claude.com/en/docs/claude-code/gitlab-ci-cd
+- **Descrição:** Integração com pipelines GitLab CI/CD
+- **Aplicações:** Automação em ambientes GitLab
+
+---
+
+## 🚀 Como Usar Estes Recursos
+
+### **Integração Rápida:**
+1. **Download templates** do repositório claude-code-templates
+2. **Adapte configurações** JSON para seu domínio
+3. **Importe agents** do SuperClaude Framework
+4. **Use exemplos** do my-claude-code-setup
+
+### **Categorias de Uso:**
+
+#### **Para Iniciantes:**
+- Comece com **claude-code-templates**
+- Use configurações básicas
+- Adapte exemplos simples
+
+#### **Para Avançados:**
+- **SuperClaude Framework** para máxima performance
+- Customização de MCP servers
+- Desenvolvimento de agents especiais
+
+#### **Para Equipes:**
+- **my-claude-code-setup** como base
+- Customização por domínio
+- Integração com CI/CD
+
+### **Commands Úteis:**
+```bash
+# Recursos oficiais (já clonados localmente)
+ls /home/arturdr/Claude/official-claude-code     # Core oficial
+ls /home/arturdr/Claude/cookbooks                 # API examples
+ls /home/arturdr/Claude/awesome-claude-code       # Recursos curados
+ls /home/arturdr/Claude/claude-templates          # Templates prontos
+ls /home/arturdr/Claude/superclaude-framework     # Framework avançado
+ls /home/arturdr/Claude/claude-setup-example      # Setup examples
+
+# Gerenciamento completo
+./scripts/manage-claude-resources.sh status       # Ver status
+./scripts/manage-claude-resources.sh update       # Atualizar todos
+./scripts/manage-claude-resources.sh setup        # Configurar ambiente
+./scripts/manage-claude-resources.sh explore      # Explorar recursos
+
+# Download individual (se necessário)
+git clone https://github.com/anthropics/claude-cookbooks
+git clone https://github.com/anthropics/claude-code
+git clone https://github.com/hesreallyhim/awesome-claude-code
+git clone https://github.com/davila7/claude-code-templates
+git clone https://github.com/SuperClaude-Org/SuperClaude_Framework
+git clone https://github.com/centminmod/my-claude-code-setup
+```
+
+---
+
+## 📊 Categorias Organizacionais
+
+### **🎯 Templates e Configurações**
+- claude-code-templates (completo)
+- my-claude-code-setup (básico)
+
+### **🤖 Frameworks e Agents**
+- SuperClaude Framework (avançado)
+- awesome-claude-code (curado)
+
+### **📚 Documentação Oficial**
+- Sub-agents (criação)
+- SDK (desenvolvimento)
+- GitHub/GitLab (CI/CD)
+
+### **🏢 Core e Oficiais**
+- official-claude-code (core CLI)
+- claude-cookbooks (API examples)
+
+### **🍳 API e Desenvolvimento**
+- cookbooks (oficial Anthropic)
+- awesome-claude-code (recursos curados)
+
+### **🎯 Templates e Configurações**
+- claude-templates (templates prontos)
+- claude-setup-example (setup básico)
+
+### **🤖 Frameworks e Agents**
+- superclaude-framework (framework avançado)
+
+### **🔗 Ferramentas Auxiliares**
+- cc-tools (performance)
+- claudekit (produtividade)
+- ContextKit (metodologia)
+
+---
+
+## ⚡ Best Practices
+
+### **Seleção de Recursos:**
+1. **Avalie complexidade** do seu projeto
+2. **Escolha templates** adequados ao domínio
+3. **Adapte configurações** gradualmente
+4. **Teste integrations** antes de produção
+
+### **Integração Gradual:**
+1. Comece com **templates básicos**
+2. Adicione **agents especializados**
+3. Integre **MCP servers**
+4. Implemente **CI/CD**
+
+### **Manutenção:**
+- **Versione** suas customizações
+- **Documente** adaptações locais
+- **Atualize** recursos regularmente
+- **Compartilhe** melhorias com equipe
+
+---
+
+## 🎯 Recomendações de Uso
+
+### **Para Desenvolvimento Individual:**
+- **ESSENCIAL:** Comece com **claude-cookbooks** (oficial)
+- Use **claude-code-templates** para configurações
+- Adapte agents do **awesome-claude-code**
+- Configure **MCP servers** específicos
+
+### **Para Times:**
+- Base: **my-claude-code-setup**
+- Performance: **SuperClaude Framework**
+- CI/CD: GitHub/GitLab Actions
+
+### **Para Projetos Complexos:**
+- **Base:** claude-cookbooks (oficial Anthropic)
+- **SuperClaude Framework** completo
+- Customização de MCP servers
+- Integração com múltiplas ferramentas
+
+---
+
+*Última atualização: Links verificados e organizados para fácil acesso*
+*Recomendação: Mantenha este memory atualizado com novos recursos descobertos*

@@ -1,0 +1,34 @@
+{
+  "integration": {
+    "mcp_daemon": {
+      "config_file": "/home/arturdr/.config/mcpdog/mcpdog.config.json",
+      "web_port": 38881,
+      "auto_start": true
+    },
+    "claude_code": {
+      "config_file": "/home/arturdr/.claude.json",
+      "native_mcps": ["filesystem"]
+    },
+    "sync_settings": {
+      "auto_sync": true,
+      "fallback_to_external": true,
+      "health_check_interval": 30
+    }
+  },
+  "mcp_servers": {
+    "essential": [
+      "filesystem",
+      "simple-ecosystem"
+    ],
+    "external_from_mcpdog": [
+      "sequential-thinking",
+      "tavily",
+      "openrouter",
+      "github-mcp-server",
+      "playwright-microsoft",
+      "mem0-mcp",
+      "vectara-mcp",
+      "perplexity-mcp"
+    ]
+  }
+}

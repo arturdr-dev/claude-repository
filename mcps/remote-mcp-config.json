@@ -1,0 +1,197 @@
+{
+  "remote_mcp_architecture": {
+    "description": "Configuração para MCPs remotos em VPS Oracle",
+    "vps_config": {
+      "provider": "Oracle Cloud Free Tier",
+      "instance": "VM.Standard.A1.Flex",
+      "specs": {
+        "cpu": "4 OCPU",
+        "ram": "24GB",
+        "storage": "50GB SSD"
+      },
+      "ports": {
+        "ssh": 22,
+        "mcpdog_daemon": 9999,
+        "mcpdog_web": 38881,
+        "mcp_http": 8080
+      }
+    },
+    "mcp_servers": {
+      "remote_filesystem": {
+        "transport": "http",
+        "url": "http://VPS_IP:8080/filesystem",
+        "description": "Filesystem access via VPS",
+        "fallback_local": true
+      },
+      "remote_sequential_thinking": {
+        "transport": "http",
+        "url": "http://VPS_IP:8080/sequential-thinking",
+        "description": "Sequential thinking via VPS",
+        "fallback_local": true
+      },
+      "remote_tavily": {
+        "transport": "http",
+        "url": "http://VPS_IP:8080/tavily",
+        "description": "Web search via VPS",
+        "api_key_on_vps": true
+      },
+      "remote_openrouter": {
+        "transport": "http",
+        "url": "http://VPS_IP:8080/openrouter",
+        "description": "400+ LLM models via VPS",
+        "api_key_on_vps": true
+      },
+      "remote_github": {
+        "transport": "http",
+        "url": "http://VPS_IP:8080/github-mcp-server",
+        "description": "GitHub DevOps via VPS",
+        "token_on_vps": true
+      },
+      "remote_playwright": {
+        "transport": "http",
+        "url": "http://VPS_IP:8080/playwright-microsoft",
+        "description": "Web automation via VPS"
+      },
+      "remote_notion": {
+        "transport": "http",
+        "url": "http://VPS_IP:8080/notion",
+        "description": "Notion knowledge management via VPS"
+      },
+      "remote_gemini": {
+        "transport": "http",
+        "url": "http://VPS_IP:8080/gemini-mcp-server",
+        "description": "Google Gemini AI via VPS",
+        "api_key_on_vps": true
+      },
+      "remote_perplexity": {
+        "transport": "http",
+        "url": "http://VPS_IP:8080/perplexity-mcp",
+        "description": "Advanced search via VPS",
+        "api_key_on_vps": true
+      },
+      "remote_vectara": {
+        "transport": "http",
+        "url": "http://VPS_IP:8080/vectara-mcp",
+        "description": "Semantic search via VPS",
+        "api_key_on_vps": true
+      },
+      "remote_mem0": {
+        "transport": "http",
+        "url": "http://VPS_IP:8080/mem0-mcp",
+        "description": "AI persistent memory via VPS",
+        "api_key_on_vps": true
+      },
+      "remote_node": {
+        "transport": "http",
+        "url": "http://VPS_IP:8080/node-mcp",
+        "description": "Node.js runtime via VPS"
+      },
+      "remote_grafana": {
+        "transport": "http",
+        "url": "http://VPS_IP:8080/mcp-grafana-server",
+        "description": "Monitoring via VPS"
+      },
+      "remote_context7": {
+        "transport": "http",
+        "url": "http://VPS_IP:8080/context7",
+        "description": "Technical docs via VPS"
+      },
+      "remote_docker": {
+        "transport": "http",
+        "url": "http://VPS_IP:8080/docker-mcp-gateway",
+        "description": "Container management via VPS"
+      },
+      "remote_metrics": {
+        "transport": "http",
+        "url": "http://VPS_IP:8080/mcp-metrics-server",
+        "description": "System metrics via VPS"
+      },
+      "remote_agent_server": {
+        "transport": "http",
+        "url": "http://VPS_IP:8080/mcp-agent-server",
+        "description": "Agent orchestration via VPS"
+      },
+      "remote_api_monitor": {
+        "transport": "http",
+        "url": "http://VPS_IP:8080/api-monitor",
+        "description": "API monitoring via VPS"
+      }
+    },
+    "claude_cli_config": {
+      "local_mcp_fallback": {
+        "filesystem": "npx @modelcontextprotocol/server-filesystem /home/arturdr/Claude",
+        "sequential_thinking": "npx @modelcontextprotocol/server-sequential-thinking"
+      },
+      "connection_timeout": 30,
+      "retry_attempts": 3,
+      "cache_enabled": true,
+      "cache_ttl": 300
+    },
+    "security": {
+      "api_keys_on_vps": true,
+      "ssh_key_required": true,
+      "vpn_optional": true,
+      "firewall_ports": [22, 38881, 8080],
+      "rate_limiting": true
+    },
+    "monitoring": {
+      "vps_dashboard": "http://VPS_IP:38881",
+      "health_check_endpoint": "http://VPS_IP:8080/health",
+      "metrics_endpoint": "http://VPS_IP:8080/metrics",
+      "alerting_enabled": true
+    },
+    "performance": {
+      "expected_latency_ms": "< 200ms",
+      "bandwidth_required": "1Mbps",
+      "connection_pool_size": 5,
+      "compression_enabled": true
+    }
+  },
+  "setup_commands": {
+    "add_remote_mcp": "claude mcp add --transport http {name} http://VPS_IP:8080/{server_name}",
+    "test_connection": "curl -f http://VPS_IP:8080/health",
+    "list_remote_mcps": "claude mcp list",
+    "check_dashboard": "echo \"Dashboard: http://VPS_IP:38881\""
+  },
+  "troubleshooting": {
+    "connection_issues": [
+      "Check VPS connectivity: ping VPS_IP",
+      "Verify MCPDog status: ssh VPS 'systemctl status mcpdog'",
+      "Test port accessibility: telnet VPS_IP 8080",
+      "Check firewall rules: ssh VPS 'sudo ufw status'"
+    ],
+    "performance_issues": [
+      "Measure latency: ping -c 10 VPS_IP",
+      "Check bandwidth: speedtest-cli",
+      "Monitor VPS resources: ssh VPS 'htop'",
+      "Verify MCPDog logs: ssh VPS 'journalctl -u mcpdog -f'"
+    ],
+    "fallback_options": [
+      "Use local MCPs if VPS unavailable",
+      "Enable offline mode for critical functions",
+      "Cache responses locally",
+      "Implement retry logic with exponential backoff"
+    ]
+  },
+  "advantages": {
+    "local": [
+      "Super lightweight Claude CLI (< 100MB RAM)",
+      "Instant startup time",
+      "No local resource consumption",
+      "Silent operation (no fans/heating)"
+    ],
+    "centralized": [
+      "Single point of maintenance",
+      "Resource pooling and sharing",
+      "24/7 availability",
+      "Centralized monitoring and logging",
+      "Easy backups and updates"
+    ],
+    "economic": [
+      "Oracle Free Tier covers everything",
+      "No need to upgrade local hardware",
+      "Pay only for what you use (if exceeding free tier)",
+      "Better resource utilization"
+    ]
+  }
+}

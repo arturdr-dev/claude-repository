@@ -1,0 +1,107 @@
+# 🏗️ Estrutura Técnica do Projeto - Claude Code CLI
+
+**Tipo:** Memory Document
+**Prioridade:** Alta
+**Contexto:** Detalhamento técnico completo da estrutura para automação
+
+## 📁 Estrutura Detalhada e Propósitos
+
+### Diretórios Principais
+
+#### `/` (Raiz do Projeto)
+- **CLAUDE.md**: Hub central de contexto para Claude Code CLI
+- **README.md**: Documentação humana para onboarding e colaboração
+
+#### `memory/` - Memórias Inteligentes
+- **guia-claude-code-cli.md**: Documentação oficial completa com links
+- **checklist.memory**: Checklists de verificação e manutenção
+- **comandos.memory**: Comandos essenciais e referências rápidas
+- **estrutura-projeto.memory**: Este arquivo - detalhamento técnico
+- **automacao-memory.memory**: Scripts e automações técnicas
+- **README.md**: Documentação do sistema de memórias
+
+#### `docs/` - Documentação Técnica
+- **arquitetura.md**: Arquitetura completa do ecossistema
+- Propósito: Documentação técnica aprofundada para desenvolvedores
+
+#### `scripts/` - Automação
+- **setup.sh**: Configuração inicial e validação do ambiente
+- **backup.sh**: Backup automatizado com snapshots
+- Propósito: Automatizar tarefas repetitivas e manutenção
+
+#### `configs/` - Configurações
+- **dev.env**: Variáveis de ambiente de desenvolvimento
+- **prod.env**: Variáveis de ambiente de produção
+- Propósito: Configurações específicas por ambiente
+
+#### `backup/` - Snapshots
+- Propósito: Armazenar backups automáticos do sistema
+- Formato: `snapshot-YYYYMMDD_HHMMSS.tar.gz`
+- Retenção: Últimos 5 backups automaticamente
+
+#### `logs/` - Logs e Auditoria
+- **setup.log**: Logs de configuração
+- **backup.log**: Logs de backups
+- **session.log**: Logs de sessões Claude Code
+- Propósito: Auditoria e troubleshooting
+
+#### `agents/` - Subagentes Personalizados
+- **security-agent.json**: Agente especializado em segurança
+- **performance-agent.json**: Agente especializado em performance
+- Propósito: Extensão de capacidades do Claude Code CLI
+
+#### `tests/` - Validação Automatizada
+- **test_memory.sh**: Validação de arquivos de memória
+- Propósito: Garantir integridade do sistema
+
+#### `projects/` - Projetos Modulares
+- **projeto-a/**: Projeto exemplo de documentação
+- **projeto-b/**: Projeto exemplo de análise de código
+- Propósito: Contexto isolado por projeto com herança global
+
+## 🔧 Como o Claude Code CLI Deve Usar Esta Estrutura
+
+### Context Loading
+1. Carregar `CLAUDE.md` principal
+2. Processar imports de memória automaticamente
+3. Disponibilizar contexto combinado durante sessão
+
+### Navegação de Projetos
+- Raiz: Contexto global completo
+- Subprojetos: Contexto isolado + herança global
+- Memórias: Acesso via `/memory retrieve <nome>`
+
+### Automação Integrada
+- Scripts executáveis via Bash tool
+- Configurações carregadas por ambiente
+- Logs registrados automaticamente
+
+### Validação Contínua
+- Testes executados automaticamente
+- Integrity check de arquivos de memória
+- Verificação de imports e referências
+
+## 🎯 Recomendações de Uso para Claude Code CLI
+
+1. **Sempre verifique** se os arquivos de memória existem antes de referenciar
+2. **Use os scripts** para operações de manutenção
+3. **Respeite o isolamento** de projetos
+4. **Registre ações** nos logs apropriados
+5. **Valide alterações** antes de aplicar
+
+## 🚀 Fluxos de Automação
+
+### Setup Novo Projeto
+1. Executar `./scripts/setup.sh`
+2. Validar com `./tests/test_memory.sh`
+3. Criar snapshot com `./scripts/backup.sh`
+
+### Manutenção Diária
+1. Verificar logs em `logs/`
+2. Limpar backups antigos (automático)
+3. Atualizar memórias conforme necessário
+
+### Recuperação de Desastres
+1. Restaurar do backup mais recente em `backup/`
+2. Executar validação completa
+3. Reconstruir índices de memória

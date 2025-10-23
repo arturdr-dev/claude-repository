@@ -1,0 +1,49 @@
+# ⌨️ Comandos Essenciais - Claude Code CLI
+
+**Tipo:** Memory Document
+**Prioridade:** Alta
+**Contexto:** Referência rápida de comandos essenciais
+
+## 🎯 Comandos Nativos Principais
+
+### CLI Básico
+```bash
+claude --version                    # Versão instalada
+claude --help                       # Ajuda completa
+claude "prompt"                     # Sessão interativa
+claude -p "prompt"                  # Modo print (não interativo)
+```
+
+### Memória
+```bash
+/memory list                        # Listar memórias disponíveis
+/memory retrieve <nome>             # Recuperar memória específica
+/memory search <termo>              # Buscar em memórias
+```
+
+### Subagentes
+```bash
+/agent list                         # Listar subagentes disponíveis
+/agent use <nome>                   # Usar subagente específico
+```
+
+### Skills
+```bash
+/skill list                         # Listar skills disponíveis
+/skill use <nome>                   # Usar skill específico
+```
+
+## 🎯 MCP Commands
+```bash
+mcp-daemon start                    # Iniciar serviços MCP
+mcp-daemon stop                     # Parar serviços MCP
+mcp-daemon status                   # Verificar status MCP
+mcp-daemon restart                  # Reiniciar serviços MCP
+```
+
+## 🎯 Debug e Troubleshooting
+```bash
+claude --debug                      # Modo debug
+claude --verbose                    # Modo verbose
+claude --output-format json         # Saída JSON
+```

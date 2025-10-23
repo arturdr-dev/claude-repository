@@ -1,0 +1,26 @@
+{
+  "name": "ml-analyst",
+  "type": "sub-agent",
+  "description": "Sub-agente especializado em análise de modelos de machine learning",
+  "version": "1.0.0",
+  "specialization": "machine-learning-analysis",
+  "capabilities": [
+    "model-evaluation",
+    "performance-analysis",
+    "hyperparameter-tuning",
+    "model-comparison"
+  ],
+  "tools": ["Read", "Bash", "Grep"],
+  "preferred_mcp_servers": ["ml-workflow", "monitoring"],
+  "context_requirements": [
+    "model-metrics",
+    "training-history",
+    "evaluation-datasets"
+  ],
+  "workflow_patterns": [
+    "load-model",
+    "evaluate-performance",
+    "generate-report",
+    "recommend-improvements"
+  ]
+}

@@ -1,0 +1,33 @@
+# ✅ Checklist de Verificação - Claude Code CLI
+
+**Tipo:** Memory Document
+**Prioridade:** Alta
+**Contexto:** Checklist para verificação e manutenção do ecossistema
+
+## 🎯 Checklist Diário
+
+- [ ] Verificar funcionamento do CLI: `claude --version`
+- [ ] Verificar MCPs ativos: `mcp-daemon status`
+- [ ] Verificar espaço em disco
+- [ ] Limpar logs antigos
+
+## 🎯 Checklist Semanal
+
+- [ ] Backup completo das configurações
+- [ ] Atualizar documentação
+- [ ] Verificar atualizações do Claude Code
+- [ ] Testar todos os scripts de automação
+
+## 🎯 Checklist Mensal
+
+- [ ] Auditoria de segurança
+- [ ] Limpeza de arquivos temporários
+- [ ] Revisão de permissões
+- [ ] Otimização de performance
+
+## 🚨 Verificações Críticas
+
+- [ ] Funcionamento dos agentes personalizados
+- [ ] Conectividade com APIs externas
+- [ ] Integridade dos arquivos de memória
+- [ ] Backup das chaves de API

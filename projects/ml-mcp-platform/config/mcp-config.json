@@ -1,0 +1,23 @@
+{
+  "ml-workflow": {
+    "command": "python3",
+    "args": ["./mcp-servers/ml_workflow_server.py"],
+    "description": "Machine Learning workflow orchestration server",
+    "priority": 1,
+    "timeout": 30000
+  },
+  "ml-fs": {
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-filesystem", "./data"],
+    "description": "Filesystem access para datasets ML",
+    "priority": 2,
+    "timeout": 15000
+  },
+  "ml-postgres": {
+    "command": "npx", 
+    "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://user:pass@localhost:5432/mldb"],
+    "description": "PostgreSQL para experimentos ML",
+    "priority": 3,
+    "timeout": 20000
+  }
+}

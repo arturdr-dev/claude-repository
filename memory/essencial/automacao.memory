@@ -1,0 +1,195 @@
+# 🔧 Automação e Scripts Técnicos - Claude Code CLI
+
+**Tipo:** Memory Document
+**Prioridade:** Alta
+**Contexto:** Detalhamento técnico de scripts e automações
+
+## 📜 Scripts Disponíveis
+
+### setup.sh - Configuração Inicial
+
+**Localização:** `scripts/setup.sh`
+**Propósito:** Configurar ambiente e validar instalação
+**Execução:** `./scripts/setup.sh`
+
+**Validações realizadas:**
+- Verificar instalação Claude CLI (`claude --version`)
+- Verificar configuração MCP (`~/.claude/mcp.json`)
+- Validar arquivos de memória essenciais
+- Criar estrutura de diretórios
+- Registrar log em `logs/setup.log`
+
+**Uso recomendado:**
+- Após clonar o projeto
+- Quando houver alterações estruturais
+- Para troubleshooting de instalação
+
+### backup.sh - Backup Automatizado
+
+**Localização:** `scripts/backup.sh`
+**Propósito:** Criar snapshots automáticos do ecossistema
+**Execução:** `./scripts/backup.sh`
+
+**Arquivos incluídos no backup:**
+- `CLAUDE.md` (contexto principal)
+- `memory/` (todas as memórias)
+- `docs/` (documentação técnica)
+- `scripts/` (scripts de automação)
+- `configs/` (configurações)
+- `agents/` (agentes personalizados)
+- `projects/` (projetos modulares)
+
+**Exclusões:**
+- `backup/` (evitar backup recursivo)
+- `logs/` (logs podem ser regenerados)
+
+**Retenção automática:** Mantém últimos 5 backups
+**Registro:** Log em `logs/backup.log`
+
+## 🧪 Scripts de Teste
+
+### test_memory.sh - Validação de Memórias
+
+**Localização:** `tests/test_memory.sh`
+**Propósito:** Validar integridade dos arquivos de memória
+**Execução:** `./tests/test_memory.sh`
+
+**Validações:**
+- Verificar existência de arquivos essenciais:
+  - `memory/guia-claude-code-cli.md`
+  - `memory/checklist.memory`
+  - `memory/comandos.memory`
+- Verificar imports em `CLAUDE.md`
+- Validar sintaxe básica dos arquivos
+
+**Códigos de saída:**
+- 0: Sucesso
+- 1: Erro crítico (arquivo ausente ou inválido)
+
+## ⚙️ Configurações de Ambiente
+
+### dev.env - Desenvolvimento
+
+**Localização:** `configs/dev.env`
+**Propósito:** Configurações para ambiente de desenvolvimento
+
+**Variáveis principais:**
+- `CLAUDE_DEBUG=false`
+- `CLAUDE_VERBOSE=true`
+- `MCP_DEBUG=false`
+- `ENABLE_GITHUB_INTEGRATION=true`
+- `ENABLE_NOTION_INTEGRATION=true`
+
+### prod.env - Produção
+
+**Localização:** `configs/prod.env`
+**Propósito:** Configurações otimizadas para produção
+
+**Variáveis principais:**
+- `CLAUDE_DEBUG=false`
+- `CLAUDE_VERBOSE=false`
+- `MCP_DEBUG=false`
+- `ENABLE_AUDIT_LOG=true`
+- `SESSION_TIMEOUT=3600`
+
+## 🤖 Agentes Personalizados
+
+### security-agent.json
+
+**Localização:** `agents/security-agent.json`
+**Capacidades:**
+- security-review
+- vulnerability-scan
+- compliance-check
+- security-audit
+
+**Ferramentas permitidas:**
+- Read
+- Grep
+- Bash
+
+### performance-agent.json
+
+**Localização:** `agents/performance-agent.json`
+**Capacidades:**
+- performance-analysis
+- bottleneck-identification
+- optimization-recommendations
+- benchmarking
+
+**Ferramentas permitidas:**
+- Read
+- Bash
+- Grep
+
+## 🚀 Fluxos de Automação para Claude Code CLI
+
+### Setup Inicial Automático
+```bash
+# Verificar instalação
+if ! command -v claude &> /dev/null; then
+    echo "❌ Claude CLI não encontrado"
+    exit 1
+fi
+
+# Executar script de setup
+./scripts/setup.sh
+
+# Validar sistema
+./tests/test_memory.sh
+```
+
+### Backup Programado (sugestão para cron)
+```bash
+# Backup diário às 2h da manhã
+0 2 * * * cd /path/to/Claude && ./scripts/backup.sh
+```
+
+### Validação Contínua
+```bash
+# Antes de commits importantes
+if ! ./tests/test_memory.sh; then
+    echo "❌ Falha na validação de memórias"
+    exit 1
+fi
+```
+
+## 📝 Como Claude Code CLI Deve Usar Estes Scripts
+
+### Durante Sessões Interativas
+1. **Sugerir setup** quando detectar ambiente não configurado
+2. **Recomendar backup** antes de alterações estruturais
+3. **Executar testes** para validar configurações
+
+### Para Automação de Tarefas
+1. **Usar scripts como templates** para novas automações
+2. **Respeitar estrutura de logs** para registro de ações
+3. **Seguir padrões de nomenclatura** e organização
+
+### Para Manutenção Proativa
+1. **Verificar logs** periodicamente
+2. **Sugerir limpeza** de backups antigos
+3. **Recomendar atualizações** de configurações
+
+## 🔍 Troubleshooting Comum
+
+### Scripts não executáveis
+```bash
+chmod +x scripts/*.sh tests/*.sh
+```
+
+### Problemas de permissão em logs
+```bash
+chmod 755 logs/
+touch logs/{setup,backup,session}.log
+```
+
+### Validação de memória falhando
+1. Verificar se arquivos existem em `memory/`
+2. Validar sintaxe dos imports em `CLAUDE.md`
+3. Verificar permissões de leitura
+
+### Backup falhando
+1. Verificar espaço em disco
+2. Validar permissões de escrita em `backup/`
+3. Verificar se não há arquivos corrompidos

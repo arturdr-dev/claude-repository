@@ -1,0 +1,22 @@
+{
+  "name": "code-reviewer",
+  "type": "sub-agent", 
+  "description": "Sub-agente especializado em revisão de código e boas práticas",
+  "version": "1.0.0",
+  "specialization": "code-review",
+  "capabilities": [
+    "static-analysis",
+    "security-review",
+    "performance-review",
+    "best-practices-check"
+  ],
+  "tools": ["Read", "Grep", "Bash"],
+  "preferred_mcp_servers": ["github-integration"],
+  "review_checklist": [
+    "code-style",
+    "security-vulnerabilities",
+    "performance-issues",
+    "test-coverage",
+    "documentation"
+  ]
+}

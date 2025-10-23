@@ -1,0 +1,6 @@
+#!/bin/bash
+# 🚀 Quick MCP Start
+# Ativação rápida do ecossistema MCP
+
+/home/arturdr/Claude/scripts/activate-mcp-daemon.sh
+/home/arturdr/Claude/scripts/mcp-health-check.sh

@@ -1,0 +1,201 @@
+# 📚 Guia Integrado de Documentação Claude Code CLI
+
+**Tipo:** Memory Document
+**Prioridade:** Alta
+**Contexto:** Documentação oficial completa do ecossistema Claude Code CLI
+
+Este documento serve como referência central para o Claude Code CLI, facilitando consultas rápidas e automação inteligente. Cada seção contém explicações e links oficiais para aprofundamento.
+
+---
+
+## 🎯 Como Usar Esta Memória
+
+### Para o Claude Code CLI:
+- **Carregamento automático:** Importado via `./memory/guia-claude-code-cli.md` no CLAUDE.md
+- **Contexto persistente:** Disponível durante toda a sessão
+- **Consulta rápida:** Use `/memory retrieve guia-claude-code-cli` para acesso direto
+
+### Seções Prioritárias por Tipo de Tarefa:
+- **Setup:** Getting Started → Overview, Quickstart
+- **Desenvolvimento:** Build → Subagents, Plugins, Skills
+- **Deploy:** Deployment → Cloud providers, Network
+- **Administração:** Administration → Security, Monitoring
+- **Configuração:** Configuration → Settings, IDEs
+
+---
+
+## Getting Started
+
+- **Overview**
+  Visão geral do Claude Code, principais recursos e objetivos.
+  [Ver documentação](https://docs.claude.com/en/docs/claude-code/overview)
+
+- **Quickstart**
+  Instalação, login e primeiros comandos para começar a usar.
+  [Ver documentação](https://docs.claude.com/en/docs/claude-code/quickstart)
+
+- **Common workflows**
+  Exemplos práticos de navegação, depuração, automação e integração.
+  [Ver documentação](https://docs.claude.com/en/docs/claude-code/common-workflows)
+
+- **Claude Code on the web**
+  Como usar o Claude Code em ambientes web e integrações remotas.
+  [Ver documentação](https://docs.claude.com/en/docs/claude-code/claude-code-on-the-web)
+
+---
+
+## Build with Claude Code
+
+- **Subagents**
+  Criação e uso de agentes especializados para modularidade e automação.
+  [Ver documentação](https://docs.claude.com/en/docs/claude-code/sub-agents)
+
+- **Plugins**
+  Extensão de funcionalidades via plugins customizados.
+  [Ver documentação](https://docs.claude.com/en/docs/claude-code/plugins)
+
+- **Agent Skills**
+  Definição de habilidades específicas dos agentes.
+  [Ver documentação](https://docs.claude.com/en/docs/claude-code/skills)
+
+- **Output styles**
+  Personalização do formato das respostas dos agentes.
+  [Ver documentação](https://docs.claude.com/en/docs/claude-code/output-styles)
+
+- **Hooks**
+  Eventos e automações disparadas por ações do sistema.
+  [Ver documentação](https://docs.claude.com/en/docs/claude-code/hooks-guide)
+
+- **Headless mode**
+  Execução sem interface para automações e CI/CD.
+  [Ver documentação](https://docs.claude.com/en/docs/claude-code/headless)
+
+- **GitHub Actions / GitLab CI/CD**
+  Integração com pipelines de automação.
+  [GitHub Actions](https://docs.claude.com/en/docs/claude-code/github-actions)
+  [GitLab CI/CD](https://docs.claude.com/en/docs/claude-code/gitlab-ci-cd)
+
+- **Model Context Protocol (MCP)**
+  Orquestração entre múltiplos modelos e agentes.
+  [Ver documentação](https://docs.claude.com/en/docs/claude-code/mcp)
+
+- **Troubleshooting**
+  Soluções para problemas comuns.
+  [Ver documentação](https://docs.claude.com/en/docs/claude-code/troubleshooting)
+
+- **Claude Agent SDK / Migration**
+  Desenvolvimento avançado e migração para SDK.
+  [Ver documentação](https://docs.claude.com/en/docs/claude-code/sdk/migration-guide)
+
+---
+
+## Deployment
+
+- **Overview**
+  Aspectos gerais de implantação e infraestrutura.
+  [Ver documentação](https://docs.claude.com/en/docs/claude-code/third-party-integrations)
+
+- **Amazon Bedrock / Google Vertex AI**
+  Integração com provedores cloud.
+  [Amazon Bedrock](https://docs.claude.com/en/docs/claude-code/amazon-bedrock)
+  [Google Vertex AI](https://docs.claude.com/en/docs/claude-code/google-vertex-ai)
+
+- **Network configuration / LLM gateway**
+  Configuração de rede e gateways de modelo.
+  [Network configuration](https://docs.claude.com/en/docs/claude-code/network-config)
+  [LLM gateway](https://docs.claude.com/en/docs/claude-code/llm-gateway)
+
+- **Development containers / Sandboxing**
+  Ambientes isolados para desenvolvimento seguro.
+  [Development containers](https://docs.claude.com/en/docs/claude-code/devcontainer)
+  [Sandboxing](https://docs.claude.com/en/docs/claude-code/sandboxing)
+
+---
+
+## Administration
+
+- **Advanced installation / IAM**
+  Instalação robusta e gerenciamento de identidades.
+  [Advanced installation](https://docs.claude.com/en/docs/claude-code/setup)
+  [IAM](https://docs.claude.com/en/docs/claude-code/iam)
+
+- **Security / Data usage**
+  Práticas de segurança e uso responsável dos dados.
+  [Security](https://docs.claude.com/en/docs/claude-code/security)
+  [Data usage](https://docs.claude.com/en/docs/claude-code/data-usage)
+
+- **Monitoring / Costs / Analytics**
+  Monitoramento, controle de custos e análise de uso.
+  [Monitoring](https://docs.claude.com/en/docs/claude-code/monitoring-usage)
+  [Costs](https://docs.claude.com/en/docs/claude-code/costs)
+  [Analytics](https://docs.claude.com/en/docs/claude-code/analytics)
+
+- **Plugin marketplaces**
+  Gerenciamento de plugins externos.
+  [Ver documentação](https://docs.claude.com/en/docs/claude-code/plugin-marketplaces)
+
+---
+
+## Configuration
+
+- **Settings**
+  Configurações gerais do Claude Code.
+  [Ver documentação](https://docs.claude.com/en/docs/claude-code/settings)
+
+- **Visual Studio Code / JetBrains IDEs**
+  Integração com IDEs populares.
+  [VS Code](https://docs.claude.com/en/docs/claude-code/vs-code)
+  [JetBrains](https://docs.claude.com/en/docs/claude-code/jetbrains)
+
+- **Terminal / Model configuration**
+  Personalização do terminal e modelos.
+  [Terminal configuration](https://docs.claude.com/en/docs/claude-code/terminal-config)
+  [Model configuration](https://docs.claude.com/en/docs/claude-code/model-config)
+
+- **Memory management**
+  Gerenciamento avançado de contexto e memórias.
+  [Ver documentação](https://docs.claude.com/en/docs/claude-code/memory)
+
+- **Status line configuration**
+  Customização da linha de status do CLI.
+  [Ver documentação](https://docs.claude.com/en/docs/claude-code/statusline)
+
+---
+
+## Reference
+
+- **CLI reference / Interactive mode**
+  Comandos completos e modo interativo.
+  [CLI reference](https://docs.claude.com/en/docs/claude-code/cli-reference)
+  [Interactive mode](https://docs.claude.com/en/docs/claude-code/interactive-mode)
+
+- **Slash commands / Checkpointing**
+  Comandos customizados e salvamento de estados.
+  [Slash commands](https://docs.claude.com/en/docs/claude-code/slash-commands)
+  [Checkpointing](https://docs.claude.com/en/docs/claude-code/checkpointing)
+
+- **Hooks / Plugins reference**
+  Documentação técnica de extensões.
+  [Hooks reference](https://docs.claude.com/en/docs/claude-code/hooks)
+  [Plugins reference](https://docs.claude.com/en/docs/claude-code/plugins-reference)
+
+---
+
+## Resources
+
+- **Legal and compliance**
+  Aspectos legais e conformidade.
+  [Ver documentação](https://docs.claude.com/en/docs/claude-code/legal-and-compliance)
+
+---
+
+## Como Claude Code deve usar este documento
+
+- Utilize este guia como fonte de contexto para responder dúvidas, sugerir comandos e fluxos, e automatizar tarefas.
+- Consulte os links para explicações detalhadas e exemplos práticos.
+- Priorize seções conforme o tipo de tarefa (instalação, automação, segurança, integração, troubleshooting).
+- Use este documento para enriquecer respostas e recomendações durante sessões interativas ou automações.
+
+---
+
+Coloque este arquivo em /memory e referencie no CLAUDE.md para garantir que o Claude Code CLI carregue e utilize o conteúdo como contexto. Isso permitirá respostas mais precisas, automação inteligente e consulta rápida aos tópicos essenciais do ecossistema.

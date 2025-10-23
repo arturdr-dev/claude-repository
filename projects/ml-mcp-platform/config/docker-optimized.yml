@@ -1,0 +1,155 @@
+# 🐳 Docker Compose Otimizado para 15GB RAM
+version: '3.8'
+
+services:
+  # Jupyter Lab - Leve (limitado a 2GB)
+  jupyter:
+    image: jupyter/scipy-notebook:latest
+    container_name: ml-mcp-jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - ../:/workspace
+      - jupyter_data:/home/jovyan
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - JUPYTER_TOKEN=Drugo321!
+      - NB_USER=arturdr
+      - NB_UID=1000
+      - NB_GID=1000
+    command: start-notebook.sh --NotebookApp.token='Drugo321!'
+    mem_limit: 2g
+    memswap_limit: 2g
+    networks:
+      - ml-mcp-network
+    restart: unless-stopped
+
+  # MLflow - Leve (limitado a 1GB)
+  mlflow:
+    image: python:3.11-slim
+    container_name: ml-mcp-mlflow
+    ports:
+      - "5000:5000"
+    volumes:
+      - mlflow_data:/mlflow
+    command: >
+      bash -c "pip install mlflow psycopg2-binary &&
+               mlflow server --host 0.0.0.0 --port 5000
+               --default-artifact-root /mlflow/artifacts
+               --backend-store-uri postgresql://arturdr:Drugo321!@postgres:5432/mldb"
+    depends_on:
+      - postgres
+    mem_limit: 1g
+    networks:
+      - ml-mcp-network
+    restart: unless-stopped
+
+  # PostgreSQL - Configurado para 1GB
+  postgres:
+    image: postgres:15
+    container_name: ml-mcp-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=mldb
+      - POSTGRES_USER=arturdr
+      - POSTGRES_PASSWORD=Drugo321!
+      - POSTGRES_SHARED_PRELOAD_LIBRARIES=pg_stat_statements
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    mem_limit: 1g
+    networks:
+      - ml-mcp-network
+    restart: unless-stopped
+
+  # Redis - Super leve (256MB)
+  redis:
+    image: redis:7-alpine
+    container_name: ml-mcp-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    mem_limit: 256m
+    networks:
+      - ml-mcp-network
+    restart: unless-stopped
+
+  # Grafana - Leve (512MB)
+  grafana:
+    image: grafana/grafana:latest
+    container_name: ml-mcp-grafana
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=arturdr
+      - GF_SECURITY_ADMIN_PASSWORD=Drugo321!
+      - GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-simple-json-datasource
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - grafana_data:/var/lib/grafana
+    mem_limit: 512m
+    depends_on:
+      - postgres
+    networks:
+      - ml-mcp-network
+    restart: unless-stopped
+
+  # n8n - Leve (1GB)
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: ml-mcp-n8n
+    ports:
+      - "5678:5678"
+    volumes:
+      - n8n_data:/home/node/.n8n
+      - ../n8n-workflows:/workspace/workflows
+    environment:
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=arturdr
+      - N8N_BASIC_AUTH_PASSWORD=Drugo321!
+      - WEBHOOK_URL=http://localhost:5678/
+      - N8N_LOG_LEVEL=info
+      - NODE_ENV=production
+      - N8N_USER_MANAGEMENT_DISABLED=false
+    mem_limit: 1g
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - ml-mcp-network
+    restart: unless-stopped
+
+  # Model Server - Leve (1GB)
+  model-server:
+    build:
+      context: ../services/model-server
+      dockerfile: Dockerfile
+    container_name: ml-mcp-model-server
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../models:/models
+      - ../data:/data
+    environment:
+      - MODEL_PATH=/models
+      - REDIS_URL=redis://redis:6379
+      - WORKERS=2
+    mem_limit: 1g
+    depends_on:
+      - redis
+    networks:
+      - ml-mcp-network
+    restart: unless-stopped
+
+volumes:
+  jupyter_data:
+  mlflow_data:
+  postgres_data:
+  redis_data:
+  grafana_data:
+  n8n_data:
+
+networks:
+  ml-mcp-network:
+    driver: bridge

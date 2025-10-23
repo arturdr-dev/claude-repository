@@ -1,0 +1,55 @@
+# 🧠 Core Context - Essencial
+
+**Tipo:** Core Memory
+**Prioridade:** Essencial
+**Carregamento:** Sempre automático
+**Tamanho:** ~3KB
+
+## 🎯 Contexto Principal do Projeto
+
+**Projeto:** Ecossistema Claude Code CLI
+**Versão:** 1.0
+**Estrutura:** Profissional e modular
+
+## 📁 Estrutura Essencial
+
+```
+Claude/
+├── CLAUDE.md           # Contexto principal
+├── init/               # Contextos essenciais (pasta atual)
+├── memory/             # Memórias segmentadas
+├── agents/             # Configurações de agentes
+├── sub-agents/         # Sub-agentes especializados
+├── mcps/               # Servidores MCP
+├── scripts/            # Scripts de automação
+├── configs/            # Configurações
+└── projects/           # Projetos modulares
+```
+
+## 🎮 Comandos Essenciais
+
+```bash
+# Listar memórias disponíveis
+/memory list
+
+# Recuperar memória específica
+/memory retrieve <nome>
+
+# Agents e sub-agents
+/agent list
+/sub-agent use <nome>
+```
+
+## 📡 MCP Servers Disponíveis
+
+- filesystem: Acesso a arquivos
+- mcp-metrics-server: Monitoramento
+- github-mcp-server: Integração GitHub
+- mcp-agent-server: Agentes especializados
+
+## 🚀 Uso Rápido
+
+1. **Contexto carregado automaticamente**
+2. **Memórias sob demanda via comando**
+3. **Modularidade por projeto**
+4. **Automação integrada**

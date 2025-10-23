@@ -1,0 +1,20 @@
+{
+  "name": "performance-agent",
+  "description": "Agente especializado em otimização de performance",
+  "capabilities": [
+    "performance-analysis",
+    "bottleneck-identification",
+    "optimization-recommendations",
+    "benchmarking"
+  ],
+  "tools": [
+    "Read",
+    "Bash",
+    "Grep"
+  ],
+  "preferences": {
+    "focus": "performance",
+    "priority": "medium",
+    "metrics-collection": true
+  }
+}

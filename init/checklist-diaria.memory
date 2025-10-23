@@ -1,0 +1,59 @@
+# ✅ Checklist Diária - Essencial
+
+**Tipo:** Essential Memory
+**Prioridade:** Essencial
+**Carregamento:** Sempre automático
+**Tamanho:** ~2KB
+
+## 📋 Checklist Diário
+
+### 🌅 Verificação Matinal
+- [ ] Verificar status do Claude Code: `claude --version`
+- [ ] Verificar MCPs ativos: `claude mcp list`
+- [ ] Verificar espaço em disco
+- [ ] Limpar logs antigos se necessário
+
+### 📊 Verificação Semanal
+- [ ] Backup completo das configurações
+- [ ] Atualizar documentação de projetos
+- [] Verificar atualizações do Claude Code
+- [ ] Testar scripts de automação
+- [ ] Revisar e organizar memórias
+
+### 🔧 Verificação Mensal
+- [ ] Auditoria de segurança e permissões
+- [ ] Limpeza de arquivos temporários
+- [ ] Revisão de performance e uso de tokens
+- [] Otimização de estrutura de diretórios
+- [ ] Atualização de dependências
+
+## 🚨 Verificações Críticas
+
+### Antes de Mudanças Importantes
+- [ ] Backup completo via `./scripts/backup.sh`
+- [ ] Testar mudanças em ambiente de testes
+- [ ] Verificar integrações MCP
+- [ ] Validar arquivos de memória
+
+### Após Problemas
+- [ ] Verificar logs em `/logs/`
+- [ ] Restaurar do backup se necessário
+- [ ] Documentar solução encontrada
+- [ ] Atualizar checklists se necessário
+
+## 💡 Dicas de Produtividade
+
+### Economia de Tokens
+- Use memórias segmentadas
+- Recupere conteúdo sob demanda
+- Monitore uso regularmente
+- Mantenha apenas essenciais no init
+
+### Organização
+- Mantenha estrutura consistente
+- Use nomes descritivos
+- Documente customizações
+- Versione mudanças importantes
+
+---
+*Execute: `/memory retrieve checklist-diaria` para acesso rápido*

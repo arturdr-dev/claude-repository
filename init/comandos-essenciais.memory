@@ -1,0 +1,56 @@
+# ⌨️ Comandos Essenciais - Essencial
+
+**Tipo:** Essential Memory
+**Prioridade:** Essencial
+**Carregamento:** Sempre automático
+**Tamanho:** ~2KB
+
+## 🎯 Comandos Claude Code CLI
+
+### CLI Básico
+```bash
+claude --version                # Versão instalada
+claude --help                   # Ajuda completa
+claude "prompt"                  # Sessão interativa
+claude -p "prompt"               # Modo print
+```
+
+### Memória
+```bash
+/memory list                     # Listar memórias
+/memory retrieve <nome>          # Recuperar específica
+/memory search <termo>          # Buscar conteúdo
+```
+
+### Agents
+```bash
+/agent list                      # Listar agentes
+/agent use <nome>                # Usar agente
+```
+
+### MCP
+```bash
+claude mcp list                  # Listar servers MCP
+claude mcp get <nome>             # Detalhes do server
+claude mcp add --transport stdio nome comando
+```
+
+### Debug
+```bash
+claude --debug                   # Modo debug
+claude --verbose                 # Saída detalhada
+```
+
+## 🚀 Uso Diário
+
+### Workflow Típico
+1. Iniciar sessão: `claude`
+2. Usar comandos específicos
+3. Recuperar memórias conforme necessidade
+4. Salvar progresso automaticamente
+
+### Dicas de Produtividade
+- Use `-p` para scripts e automação
+- Use `--debug` para troubleshooting
+- Mantenha memórias segmentadas
+- Use `/memory retrieve` para conteúdo específico

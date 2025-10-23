@@ -1,0 +1,20 @@
+{
+  "name": "security-agent",
+  "description": "Agente especializado em segurança e auditoria de código",
+  "capabilities": [
+    "security-review",
+    "vulnerability-scan",
+    "compliance-check",
+    "security-audit"
+  ],
+  "tools": [
+    "Read",
+    "Grep",
+    "Bash"
+  ],
+  "preferences": {
+    "focus": "security",
+    "priority": "high",
+    "auto-scan": true
+  }
+}

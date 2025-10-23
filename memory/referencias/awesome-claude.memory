@@ -1,0 +1,179 @@
+# 🚀 Awesome Claude Code Resources
+
+**Tipo:** Memory Document
+**Prioridade:** Alta
+**Fonte:** https://github.com/hesreallyhim/awesome-claude-code
+**Contexto:** Recursos curados para maximizar produtividade com Claude Code CLI
+
+---
+
+## 🎯 Agent Skills (v2.0.20+)
+
+### **O que são:**
+Configurações controladas por modelo que permitem ao Claude Code realizar tarefas especializadas que exigem conhecimento ou capacidades específicas.
+
+### **Funcionalidades:**
+- **Model-controlled configurations** - Configurações controladas pelo modelo
+- **Specialized tasks** - Tarefas especializadas
+- **Knowledge integration** - Integração de conhecimento específico
+- **Capability enhancement** - Melhoria de capacidades
+
+### **Como usar:**
+```bash
+# Listar skills disponíveis
+/skill list
+
+# Usar skill específico
+/skill use <skill-name>
+
+# Criar skill personalizado
+/skill create <skill-name>
+```
+
+---
+
+## 🔄 Workflows & Metodologias
+
+### **AB Method**
+**Descrição:** Workflow principiado e orientado por especificações que transforma grandes problemas em missões incrementais focadas.
+
+**Componentes:**
+- **Slash commands** - Comandos especializados
+- **Sub agents** - Sub-agentes especializados
+- **SDLC workflows** - Fluxos para diferentes fases do ciclo de vida
+
+**Uso:** Ideal para grandes projetos que precisam ser divididos em missões gerenciáveis.
+
+### **RIPER Workflow**
+**Descrição:** Workflow de desenvolvimento estruturado com separação clara entre fases.
+
+**Fases:**
+- **R**esearch - Pesquisa
+- **I**nnovate - Inovação
+- **P**lan - Planejamento
+- **E**xecute - Execução
+- **R**eview - Revisão
+
+**Features:**
+- **Consolidated subagents** - Sub-agentes consolidados para eficiência
+- **Branch-aware memory bank** - Banco de memória consciente de branches
+- **Strict mode enforcement** - Modo estrito enforced
+
+### **Context Priming**
+**Descrição:** Abordagem sistemática para priming do Claude Code com contexto abrangente do projeto.
+
+**Aplicações:**
+- **Project scenarios** - Diferentes cenários de projeto
+- **Development contexts** - Contextos de desenvolvimento variados
+- **Specialized commands** - Comandos especializados
+
+---
+
+## 🛠️ Tooling & Ferramentas
+
+### **cc-tools**
+- **Descrição:** Implementação em Go de alta performance
+- **Features:** Smart linting integrado
+- **Linguagem:** Go
+
+### **claudekit**
+- **Descrição:** CLI toolkit abrangente
+- **Features:** Checkpointing + 20+ subagents
+- **Capacidades:** Extensivo kit de ferramentas
+
+### **ContextKit**
+- **Descrição:** Framework de metodologia de planejamento
+- **Estrutura:** 4 fases de planejamento
+- **Objetivo:** Metodologia estruturada
+
+### **cchistory**
+- **Descrição:** Command para histórico de sessões
+- **Funcionalidade:** Visualizar conversas anteriores
+
+### **cclogviewer**
+- **Descrição:** Utilitário HTML para visualizar arquivos de conversação
+- **Formato:** Interface web para logs
+
+---
+
+## ⚡ Slash Commands (Categorias)
+
+### **Linux Desktop Commands**
+- **Hardware benchmarking** - Testes de performance de hardware
+- **Filesystem organization** - Organização de sistema de arquivos
+
+### **Version Control & Git**
+- **Specialized Git operations** - Operações Git especializadas
+- **Branch management** - Gestão de branches
+
+### **Code Analysis & Testing**
+- **Quality assessment tools** - Ferramentas de avaliação de qualidade
+- **Automated testing** - Testes automatizados
+
+### **CI/Deployment**
+- **Automated workflow commands** - Comandos de workflow automatizados
+- **Pipeline integration** - Integração com pipelines
+
+### **Project Management**
+- **Task tracking** - Acompanhamento de tarefas
+- **Milestone management** - Gestão de marcos
+
+---
+
+## 📋 CLAUDE.md Files (Configurações)
+
+### **Language-Specific**
+- Configurações otimizadas para linguagens de programação específicas
+- Templates para diferentes ecossistemas
+
+### **Domain-Specific**
+- Setups especializados para diferentes indústrias
+- Configurações por domínio de aplicação
+
+### **Project Scaffolding & MCP**
+- Template configurations - Configurações template
+- MCP servers - Servidores MCP personalizados
+
+---
+
+## 🔧 Como Usar Estes Recursos
+
+### **Integração com Projetos:**
+1. **Import skills** relevantes para seu domínio
+2. **Configure workflows** (AB Method, RIPER)
+3. **Use slash commands** para automação
+4. **Adapte CLAUDE.md** com templates específicos
+
+### **Best Practices:**
+- **Context priming** antes de sessões complexas
+- **Workflows estruturados** para grandes projetos
+- **Skills especializadas** para tarefas repetitivas
+- **Tooling integrado** para produtividade
+
+### **Commands Úteis:**
+```bash
+# Explorar configurações
+ccexp
+
+# Histórico de sessões
+cchistory
+
+# Visualizar logs
+cclogviewer
+
+# Templates e scaffolding
+claudekit --template <nome>
+```
+
+---
+
+## 📚 Documentação Oficial
+
+- **Claude Code Documentation** - Guias e referências oficiais
+- **Agent Skills Documentation** - Documentação do novo feature set
+- **Configuration Guides** - Setup e instruções de customização
+
+---
+
+*Última atualização: Baseado no repositório awesome-claude-code*
+*Recomendação: Import este memory no CLAUDE.md para acesso rápido durante sessões*

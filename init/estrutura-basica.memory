@@ -1,0 +1,47 @@
+# 🏗️ Estrutura Básica - Essencial
+
+**Tipo:** Essential Memory
+**Prioridade:** Essencial
+**Carregamento:** Sempre automático
+**Tamanho:** ~2KB
+
+## 📁 Estrutura Detalhada
+
+### Diretórios Principais
+- **memory/**: Memórias inteligentes segmentadas
+- **agents/**: Configurações de agentes principais
+- **sub-agents/**: Especializações e sub-divisões
+- **mcps/**: Servidores MCP customizados
+- **projects/**: Projetos modulares isolados
+
+### Como Navegar
+```bash
+# Mudar para projeto específico
+cd projects/nome-projeto
+claude
+
+# Acessar memórias específicas
+/memory retrieve nome-da-memoria
+```
+
+### MCP Integration
+```bash
+# Listar MCP servers
+claude mcp list
+
+# Adicionar server
+claude mcp add --transport stdio server-name comando
+```
+
+## 🎯 Melhores Práticas
+
+1. **Contexto persistente** via imports
+2. **Modularidade** por projeto
+3. **Memórias sob demanda** para economia
+4. **Automação** via scripts e agents
+
+## 📋 Organização Recomendada
+
+- **Essencial**: /init (carregado sempre)
+- **Segmentado**: /memory (sob demanda)
+- **Específico**: /projects (por contexto)

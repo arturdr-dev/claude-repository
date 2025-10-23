@@ -1,0 +1,12 @@
+#!/bin/bash
+# 🚀 Quick Development Environment Start
+echo "🚀 Iniciando ambiente Claude Code..."
+echo ""
+echo "📊 Status dos recursos:"
+./scripts/manage-claude-resources.sh status
+echo ""
+echo "🎯 Ambiente pronto para desenvolvimento!"
+echo "   • Use 'claude' para iniciar sessão"
+echo "   • Explore templates em ./workspace/templates"
+echo "   • Ver exemplos em ./workspace/examples"
+echo "   • Consulte Cookbooks em ./cookbooks"
