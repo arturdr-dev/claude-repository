@@ -1,0 +1,106 @@
+# 🔌 Plugins Essenciais - Contexto Inicial
+
+**Data:** 2025-10-23
+**Carregamento:** Automático
+**Prioridade:** Essencial
+
+---
+
+## 🎯 **Plugins Essenciais Carregados Automaticamente**
+
+### **Plugins Fundamentais (Sempre Ativos):**
+
+1. **ultrathink** - Orquestrador principal de agentes
+   - **Função:** Coordena múltiplas tarefas e agentes especializados
+   - **Uso:** "Use ultrathink to analyze and optimize this system"
+
+2. **analyze-codebase** - Análise profunda de código
+   - **Função:** Entende estrutura, dependências e arquitetura
+   - **Uso:** "Use analyze-codebase to understand project structure"
+
+3. **documentation-generator** - Geração de documentação
+   - **Função:** Cria documentação técnica automática
+   - **Uso:** "Use documentation-generator to create README"
+
+### **Plugins de Qualidade (Sempre Ativos):**
+
+4. **code-review** - Revisão de código e segurança
+   - **Função:** Análise de segurança, padrões e best practices
+   - **Uso:** "Use code-review to analyze this file for security issues"
+
+5. **bug-detective** - Detecção de bugs
+   - **Função:** Encontra bugs, vulnerabilidades e problemas potenciais
+   - **Uso:** "Use bug-detective to find issues in this code"
+
+---
+
+## ⚡ **Como Funciona o Carregamento**
+
+### **Automaticamente em Cada Sessão:**
+- Plugins são carregados do `settings.json`
+- Ficam disponíveis para uso imediato
+- Não precisam de comandos de ativação
+
+### **Persistência:**
+- Configuração salva em `~/.claude/settings.json`
+- Funciona em reinicializações do sistema
+- Disponível em todos os projetos
+
+---
+
+## 🎯 **Padrões de Uso Recomendados**
+
+### **Para Análise Completa:**
+```bash
+Claude, use ultrathink to coordinate comprehensive analysis with:
+- analyze-codebase for structure understanding
+- code-review for security and quality assessment
+- bug-detective for issue identification
+```
+
+### **Para Documentação:**
+```bash
+Claude, use documentation-generator to create technical docs
+and use analyze-codebase to understand context first
+```
+
+### **Para Segurança:**
+```bash
+Claude, use code-review + bug-detective for security analysis
+```
+
+---
+
+## 🔧 **Configuração Técnica**
+
+### **Arquivo:** `~/.claude/settings.json`
+```json
+{
+  "enabledPlugins": {
+    "ultrathink@awesome-claude-code-plugins": true,
+    "analyze-codebase@awesome-claude-code-plugins": true,
+    "documentation-generator@awesome-claude-code-plugins": true,
+    "code-review@awesome-claude-code-plugins": true,
+    "bug-detective@awesome-claude-code-plugins": true,
+    "...": "outros plugins"
+  }
+}
+```
+
+### **API GLM:**
+- Endpoint: https://api.z.ai/api/anthropic
+- Token: Configurado e funcionando
+- Todos os plugins 100% compatíveis
+
+---
+
+## ⚠️ **Importante**
+
+1. **Plugins são automáticos** - Não precisa ativar manualmente
+2. **Persistentes** - Ficam salvos entre sessões
+3. **Sem custo adicional** - Apenas consumo GLM
+4. **Disponíveis globalmente** - Funcionam em qualquer projeto
+
+---
+
+**Status:** ✅ **Plugins essenciais carregados automaticamente**

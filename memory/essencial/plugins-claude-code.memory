@@ -1,0 +1,178 @@
+# 🔌 Claude Code Plugins - Memória Essencial
+
+**Data:** 2025-10-23
+**API:** GLM (Z.AI) Integration
+**Status:** 12 Plugins Instalados e Funcionando
+
+---
+
+## 🎯 **Plugins Configurados (12/12)**
+
+### **🚀 Plugins Principais (7):**
+1. **documentation-generator** - Geração automática de documentação técnica
+2. **analyze-codebase** - Análise profunda de estrutura e dependências
+3. **ultrathink** - Orquestrador inteligente (coordena 4 agentes)
+4. **code-review** - Revisão de código e análise de segurança
+5. **bug-detective** - Detecção sistemática de bugs e vulnerabilidades
+6. **refractor** - Refatoração automática e sugestões de melhorias
+7. **vision-specialist** - Análise de imagens e organização visual
+
+### **🔧 Plugins Complementares (5):**
+8. **devops-automator** - Automação CI/CD e pipelines
+9. **security-guidance** - Análise de segurança e conformidade
+10. **performance-benchmarker** - Identificação de gargalos e otimização
+11. **unit-test-generator** - Geração automática de testes unitários
+12. **commit** - Gerenciamento de dependências e versionamento
+
+---
+
+## 💡 **Como Usar os Plugins**
+
+### **Forma 1: Via Comentários GitHub**
+```bash
+@claude "use documentation-generator to create API docs"
+@claude "use code-review + bug-detective for security analysis"
+@claude "use ultrathink + performance-benchmarker to optimize"
+```
+
+### **Forma 2: Via CLI Local**
+```bash
+claude "use refactor to improve this function"
+claude "use vision-specialist to analyze this diagram"
+claude "use unit-test-generator to create tests"
+```
+
+### **Forma 3: Combinados**
+```bash
+# Análise completa
+@claude "use analyze-codebase + code-review + bug-detective + security-guidance"
+
+# Documentação + Otimização
+@claude "use documentation-generator + ultrathink + performance-benchmarker"
+
+# Testes + Qualidade
+@claude "use unit-test-generator + refactor + bug-detective"
+```
+
+---
+
+## 🎯 **Casos de Uso Principais**
+
+### **📚 Documentação Automática:**
+- Gerar READMEs técnicos
+- Criar documentação de API
+- Atualizar guias de instalação
+- Gerar changelogs automáticos
+
+### **🔍 Análise de Código:**
+- Revisar PRs automaticamente
+- Detectar vulnerabilidades
+- Sugerir refatorações
+- Analisar performance
+
+### **🧠 Orquestração Inteligente:**
+- Coordenar múltiplos agentes
+- Otimizar ecossistema
+- Planejar tarefas complexas
+- Sintetizar resultados
+
+### **🛡️ Segurança e Qualidade:**
+- Varredura de segurança
+- Detecção de bugs
+- Validação de padrões
+- Testes automáticos
+
+---
+
+## ⚡ **Performance e Custos**
+
+### **Custo:** R$ 0,00 (gratuitos)
+### **API:** GLM (já contratada)
+### **Consumo:** Varia por complexidade da tarefa
+
+### **Níveis de Consumo GLM:**
+- **Baixo:** documentation-generator, code-review, refactor
+- **Médio:** ultrathink, vision-specialist, performance-benchmarker
+- **Alto:** analyze-codebase, bug-detective, unit-test-generator
+
+---
+
+## 🔧 **Configuração Técnica**
+
+### **Arquivo de Configuração:** `~/.claude/settings.json`
+```json
+{
+  "enabledPlugins": {
+    "documentation-generator@awesome-claude-code-plugins": true,
+    "analyze-codebase@awesome-claude-code-plugins": true,
+    "ultrathink@awesome-claude-code-plugins": true,
+    "code-review@awesome-claude-code-plugins": true,
+    "bug-detective@awesome-claude-code-plugins": true,
+    "refractor@awesome-claude-code-plugins": true,
+    "vision-specialist@awesome-claude-code-plugins": true,
+    "devops-automator@awesome-claude-code-plugins": true,
+    "security-guidance@awesome-claude-code-plugins": true,
+    "performance-benchmarker@awesome-claude-code-plugins": true,
+    "unit-test-generator@awesome-claude-code-plugins": true,
+    "commit@awesome-claude-code-plugins": true
+  }
+}
+```
+
+### **API GLM Configurada:**
+- **Endpoint:** https://api.z.ai/api/anthropic
+- **Token:** fd0a6a7521e8488cb70183ccd1a7a886.iXhQZdYo0kdaabCc
+- **Timeout:** 3000000ms
+
+---
+
+## 🚀 **Integração com GitHub**
+
+### **Workflows Ativos:**
+- **claude.yml** - Responde a @claude em issues/PRs
+- **ai-tasks.yml** - Orquestração paralela de tarefas
+
+### **Automações Disponíveis:**
+- Code review automático em PRs
+- Geração de documentação
+- Análise de segurança contínua
+- Detecção de bugs sistemática
+- Otimização de performance
+
+---
+
+## 🎯 **Comandos Rápidos**
+
+### **Verificar plugins:**
+```bash
+claude plugin marketplace list
+```
+
+### **Instalar novos plugins:**
+```bash
+claude plugin install <plugin>@awesome-claude-code-plugins
+```
+
+### **Desabilitar plugin:**
+```bash
+claude plugin disable <plugin>
+```
+
+### **Testar plugin:**
+```bash
+claude "use <plugin> to <task>"
+```
+
+---
+
+## ⚠️ **Observações Importantes**
+
+1. **Plugins são persistentes** - Ficam salvos em settings.json
+2. **Não precisa adicionar ao init** - Carregam automaticamente
+3. **Funcionam com GLM API** - 100% compatível
+4. **Sem custos adicionais** - Apenas consumo GLM
+5. **Integração total** - Funcionam em CLI e GitHub
+
+---
+
+**Status:** ✅ **Todos plugins ativos e funcionando perfeitamente**
